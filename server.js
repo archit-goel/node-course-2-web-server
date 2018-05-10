@@ -19,7 +19,7 @@ hbs.registerHelper('screamit', (text) => {
 app.use((request, response, next) =>{
 	var date = new Date().toString();
 	var log = `${date}: ${request.method} ${request.path}`;
-	console.log(log);
+	console.log("Request: " + log);
 	fs.appendFile('server.log', log +'\n');
 	// next() call is must for application to proceed. if no next() then no handler below will get invoked
 	next();
