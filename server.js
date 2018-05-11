@@ -71,6 +71,13 @@ app.get('/bad', (request, response) => {
 	});
 });
 
+app.get('/projects', (request, response) =>{
+	response.render('projects.hbs', {
+		pageName : 'My Projects Portfolio',
+		userName : 'Archit'
+	});
+});
+
 // Bind application to port on machine
 
 //app.listen(3000);
